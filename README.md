@@ -1,21 +1,9 @@
-# web-scraping-challenge
-# Web Scraping Homework - Mission to Mars
+
+# Web Scraping  - Mission to Mars
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
 In this assignment, I will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
-
-### Before You Begin
-
-1. I created a new repository for this project called `web-scraping-challenge`. **Do not add this homework to an existing repository**.
-
-2.I did Clone the new repository to my computer.
-
-3. Inside my local git repository, create a directory for the web scraping challenge. Use a folder name to correspond to the challenge: **Missions_to_Mars**.
-
-4. Add my notebook files to this folder as well as my flask app.
-
-5. Push the above changes to GitHub or GitLab.
 
 ## Step 1 - Scraping
 
@@ -63,7 +51,7 @@ Complete my initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and 
 
 * Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres.
 
-* You will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
+* will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
 
 * Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys `img_url` and `title`.
 
