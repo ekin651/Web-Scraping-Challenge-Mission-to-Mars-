@@ -3,7 +3,7 @@
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
-In this assignment, I will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what I need to do.
+In this assignment, I build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what I need to do.
 
 ## Step 1 - Scraping
 
@@ -21,9 +21,9 @@ Complete my initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and 
 
 * Visit the url for JPL Featured Space Image [here](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars).
 
-* I did Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
+* I Use splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
 
-*   the image url to the full size `.jpg` image.
+* make sure the image url to the full size `.jpg` image.
 
 * Make sure to save a complete url string for this image.
 
@@ -50,7 +50,7 @@ Complete my initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and 
 
 * Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres.
 
-* will need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
+* need to click each of the links to the hemispheres in order to find the image url to the full resolution image.
 
 * Save both the image url string for the full resolution hemisphere image, and the Hemisphere title containing the hemisphere name. Use a Python dictionary to store the data using the keys `img_url` and `title`.
 
