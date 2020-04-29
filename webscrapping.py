@@ -18,15 +18,15 @@ def scrape():
     }
     browser.quit()
     return data
-# def mars_news(browser):
-#     url = "https://mars.nasa.gov/news/"
-#     browser.visit(url)
-#     html = browser.html
-#     news_soup = BeautifulSoup(html, "html.parser")
-#     soup = news_soup.select_one("ul.item_list li.slide")
-#     news_title = soup.find('div', class_='content_title').got_text()
-#     news_p = soup.find('div', class_='article_teaser_body').got_text()
-#     return news_title, news_p
+def mars_news(browser):
+    url = "https://mars.nasa.gov/news/"
+    browser.visit(url)
+    html = browser.html
+    news_soup = BeautifulSoup(html, "html.parser")
+    soup = news_soup.select_one("ul.item_list li.slide")
+    news_title = soup.find('div', class_='content_title').got_text()
+    news_p = soup.find('div', class_='article_teaser_body').got_text()
+    return news_title, news_p
 def mars_news(browser):
     url = "https://mars.nasa.gov/news/"
     browser.visit(url)
