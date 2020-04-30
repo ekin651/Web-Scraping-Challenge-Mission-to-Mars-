@@ -64,6 +64,7 @@ def hemispheres(browser):
         hemisphere_img_url = {}
         response = result.find('div', class_ = "description")
         response2 = response.find('a', class_ = "itemLink product-item")
+        # su kisimdaki resmin linki yanlis geliyordu buyuk ihtimal derste yazildiysa adam yanlis yazdi suanki 68 satiri ekledim. Degisikliklere bakarak anlasilir.
         response3 = result.find('img', class_ = "thumb")
         link = response3["src"]
         title = response2.find('h3').text
