@@ -7,18 +7,18 @@ def init_browser():
     return Browser("chrome", **executable_path, headless=False)
 def scrape():
     browser = init_browser()
-    news_title, news_p = mars_news(browser)
+    news_title, news_p = mars_news2(browser)
     data = {
         "news_title" : news_title,
         "news_p" : news_p,
-        "feature_imgae" : feature_imgae(browser),
+        "feature_image" : feature_imgae(browser),
         "hemispheres" : hemispheres(browser),
         "mars_weather" : mars_weather(browser),
         "mars_facts" : mars_facts()
     }
     browser.quit()
     return data
-def mars_news(browser):
+def mars_news1(browser):
     url = "https://mars.nasa.gov/news/"
     browser.visit(url)
     html = browser.html
@@ -27,7 +27,7 @@ def mars_news(browser):
     news_title = soup.find('div', class_='content_title').got_text()
     news_p = soup.find('div', class_='article_teaser_body').got_text()
     return news_title, news_p
-def mars_news(browser):
+def mars_news2(browser):
     url = "https://mars.nasa.gov/news/"
     browser.visit(url)
     html = browser.html
@@ -64,7 +64,8 @@ def hemispheres(browser):
         hemisphere_img_url = {}
         response = result.find('div', class_ = "description")
         response2 = response.find('a', class_ = "itemLink product-item")
-        link = response2["href"]
+        response3 = result.find('img', class_ = "thumb")
+        link = response3["src"]
         title = response2.find('h3').text
         hemisphere_img_url['title'] = title
         hemisphere_img_url['img_url'] = base_url + link
